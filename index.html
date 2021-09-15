@@ -1,49 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link rel="stylesheet" href="./css/superslides.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShinCode PortFolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
 
-<head>
-  <link rel="stylesheet" href="./css/superslides.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ShinCode PortFolio</title>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-</head>
+  <body>
+    <div id="slides">
+      <div class="overlay"></div>
 
-<body>
-  <div id="slides">
+      <div class="slides-container">
+        <img src="./img/slider1.jpg" alt="" />
+        <img src="./img/slider2.jpg" alt="" />
+        <img src="./img/slider3.jpg" alt="" />
+      </div>
 
-    <div class="overlay"></div>
+      <div class="titleMessage">
+        <div class="heading">
+          <p class="main">Shin Code</p>
+          <span class="sub typed"></span>
+        </div>
+      </div>
 
-    <div class="slides-container">
-      <img src="./img/slider1.jpg" alt="" />
-      <img src="./img/slider2.jpg" alt="" />
-      <img src="./img/slider3.jpg" alt="" />
+      <nav class="slides-navigation">
+        <a href="#" class="next"></a>
+        <a href="#" class="prev"></a>
+      </nav>
     </div>
 
-    <div class="titleMessage">
-      <div class="heading">
-        <p class="main">Shin-Code</p>
-        <p class="sub">System Engineer</p>
+    <div id="about" class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5">
+            <img src="./img/about.jpg" class="aboutImage" />
+          </div>
+          <div class="col-md-7 myTextArea">
+            <h4>My name is Takumi Shin</h4>
+            <p>
+              Hello! I'm TakumiShin from Japan. Now I study Infomation tecnology
+              and Electoric science at school. and study myself about
+              programming for a year. For example,
+              HTML/CSS/Javascript/Python/Java/C# and so on. I can create WebApp
+              with using framework like React/Django and create GameApp with
+              using Unity/C#. Now, I am challenging at nativeApp with
+              reactNative.
+            </p>
+            <p>I graduated from Kumamoto University.</p>
+          </div>
+        </div>
       </div>
     </div>
 
-    <nav class="slides-navigation">
-      <a href="#" class="next"></a>
-      <a href="#" class="prev"></a>
-    </nav>
+    <div id="skills" class="skillsSection section" >
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <h2>TECHNICAL SKILLS</h2>
+            <p>A representation of my proficiency in each skills</p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  </div>
+    <script src="js/jquery.superslides.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
+      integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
+      crossorigin="anonymous"
+    ></script>
 
-  <script src="js/jquery.superslides.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"
-    integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU"
-    crossorigin="anonymous"></script>
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>
