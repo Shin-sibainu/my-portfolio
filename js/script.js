@@ -1,3 +1,5 @@
+import { CountUp } from "./countUp.min.js"; //Uncaught SyntaxError: Cannot use import statement outside a module
+
 $(document).ready(function () {
   $("#slides").superslides({
     animation: "fade",
@@ -48,6 +50,13 @@ $(document).ready(function () {
       });
     }
   });
+
+  const countUp = new CountUp("targetId", 5234);
+  if (!countUp.error) {
+    countUp.start();
+  } else {
+    console.error(countUp.error);
+  }
 
   $(".counter").each(function () {});
 });
