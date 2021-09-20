@@ -1,5 +1,3 @@
-import { CountUp } from "./countUp.min.js"; //Uncaught SyntaxError: Cannot use import statement outside a module
-
 $(document).ready(function () {
   $("#slides").superslides({
     animation: "fade",
@@ -32,7 +30,8 @@ $(document).ready(function () {
   });
 
   var skillsTopOffset = $(".skillsSection").offset().top;
-  console.log(skillsTopOffset); //1701
+  var statsTopOffset = $(".statsSection").offset().top;
+  var countUpFinished = false;
 
   $(window).scroll(function () {
     /* もし、スクロールしているY座標が上で指定したY座標を超えたら */
@@ -49,14 +48,17 @@ $(document).ready(function () {
         },
       });
     }
+
+    if (
+      !countUpFinished &&
+      window.pageYOffset > statsTopOffset - $(window).height() + 200
+    ) {
+      $(".counter").each(function () {
+        var endValue = parseInt($(this).text());
+        $(this).countup(endValue);
+      });
+    }
+
+    countUpFinished = true; //カウントアップが終わったよ！という合図。
   });
-
-  const countUp = new CountUp("targetId", 5234);
-  if (!countUp.error) {
-    countUp.start();
-  } else {
-    console.error(countUp.error);
-  }
-
-  $(".counter").each(function () {});
 });

@@ -83,7 +83,8 @@ body {
   font-size: 21px;
 }
 
-.skillsSection {
+.skillsSection,
+.contactSection {
   background-color: #e74c3c;
   color: #fff;
 }
