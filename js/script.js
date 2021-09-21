@@ -57,8 +57,8 @@ $(document).ready(function () {
         var endValue = parseInt($(this).text());
         $(this).countup(endValue);
       });
-    }
 
-    countUpFinished = true; //カウントアップが終わったよ！という合図。
+      countUpFinished = true; //カウントアップが終わったよ！という合図。
+    }
   });
 });
