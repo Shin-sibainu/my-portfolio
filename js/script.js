@@ -29,15 +29,36 @@ $(document).ready(function () {
     },
   });
 
-  $(".chart").easyPieChart({
-    easing: "easInOut",
-    barColor: "#fff",
-    trackColor: false,
-    scaleColor: false,
-    lineWidth: 4,
-    size: 152,
-    onStep: function (from, to, percent) {
-      $(this.el).find(".percent").text(Math.round(percent));
-    },
+  var skillsTopOffset = $(".skillsSection").offset().top;
+  var statsTopOffset = $(".statsSection").offset().top;
+  var countUpFinished = false;
+
+  $(window).scroll(function () {
+    /* もし、スクロールしているY座標が上で指定したY座標を超えたら */
+    if (window.pageYOffset > skillsTopOffset - $(window).height() + 200) {
+      $(".chart").easyPieChart({
+        easing: "easInOut",
+        barColor: "#fff",
+        trackColor: false,
+        scaleColor: false,
+        lineWidth: 4,
+        size: 152,
+        onStep: function (from, to, percent) {
+          $(this.el).find(".percent").text(Math.round(percent));
+        },
+      });
+    }
+
+    if (
+      !countUpFinished &&
+      window.pageYOffset > statsTopOffset - $(window).height() + 200
+    ) {
+      $(".counter").each(function () {
+        var endValue = parseInt($(this).text());
+        $(this).countup(endValue);
+      });
+
+      countUpFinished = true; //カウントアップが終わったよ！という合図。
+    }
   });
 });
