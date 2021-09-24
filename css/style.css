@@ -218,10 +218,6 @@ body {
   width:100%;
 }
 
-.items {
-  left: 9%;
-}
-
 .items li {
   display: inline-block;
   padding: 5px;
@@ -306,7 +302,7 @@ body {
   transform: scale(1.05, 1.05);
 }
 
-.items .item {
+.items {
   padding: 0;
 }
 
@@ -318,4 +314,35 @@ body {
 
 .copyrightSection p {
   margin: 0;
+}
+
+#navigation {
+  padding: 20px 10px;
+  background-color: #e74c3c;
+  z-index: 100;
+  width: 100%;
+}
+
+#navigation li {
+  padding: 0 10px;
+}
+
+#navigation li a {
+  color: #fff;
+  padding: 0 10px;
+}
+
+.navbar-toggler-icon {
+  background-size: 100%;
+  background: url(../img/icons/menu.png);
+}
+
+.navbar-brand,
+.navbar-brand:hover {
+  color: #fff;
+}
+
+.fixedNav #navigation {
+  position: fixed;
+  top: 0;
 }
