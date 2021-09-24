@@ -61,4 +61,32 @@ $(document).ready(function () {
       countUpFinished = true; //カウントアップが終わったよ！という合図。
     }
   });
+
+  /* isotope */
+  $(".items").isotope({
+    filter: "*",
+    animationOption: {
+      duration: 1500,
+      easing: "linear",
+      queue: false,
+    },
+  });
+
+  /* filtering */
+  $("#filters a").click(function () {
+    $("#filters .current").removeClass("current");
+    $(this).addClass(".current");
+
+    var selector = $(this).attr("data-filter");
+
+    $(".items").isotope({
+      filter: selector,
+      animationOption: {
+        duration: 1500,
+        easing: "linear",
+        queue: false,
+      },
+    });
+    return false;
+  });
 });
