@@ -81,6 +81,7 @@ body {
 
 .myTextArea p {
   font-size: 21px;
+  overflow-wrap: break-word;
 }
 
 .skillsSection,
@@ -345,4 +346,20 @@ body {
 .fixedNav #navigation {
   position: fixed;
   top: 0;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  position: fixed;
+  z-index: 1000;
+}
+
+.loader .inner {
+  width: 100%;
+  height: 100%;
+  background: url("../img/loader.gif") center center no-repeat;
 }

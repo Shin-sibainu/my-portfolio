@@ -1,3 +1,20 @@
+$(window).on("load", function () {
+  console.log("load"); //一度だけ呼ばれる
+  $(".loader .inner").fadeOut(500, function () {
+    $(".loader").fadeOut(750);
+  });
+});
+
+/* isotope */
+$(".items").isotope({
+  filter: "*",
+  animationOption: {
+    duration: 1500,
+    easing: "linear",
+    queue: false,
+  },
+});
+
 $(document).ready(function () {
   $("#slides").superslides({
     animation: "fade",
@@ -60,16 +77,6 @@ $(document).ready(function () {
 
       countUpFinished = true; //カウントアップが終わったよ！という合図。
     }
-  });
-
-  /* isotope */
-  $(".items").isotope({
-    filter: "*",
-    animationOption: {
-      duration: 1500,
-      easing: "linear",
-      queue: false,
-    },
   });
 
   /* filtering */
