@@ -5,21 +5,21 @@ $(window).on("load", function () {
   });
 });
 
-/* isotope */
-$(".items").isotope({
-  filter: "*",
-  animationOption: {
-    duration: 1500,
-    easing: "linear",
-    queue: false,
-  },
-});
-
 $(document).ready(function () {
   $("#slides").superslides({
     animation: "fade",
     play: 4000,
     pagination: false,
+  });
+
+  /* isotope */
+  $(".items").isotope({
+    filter: "*",
+    animationOption: {
+      duration: 1500,
+      easing: "linear",
+      queue: false,
+    },
   });
 
   var typed = new Typed(".typed", {
